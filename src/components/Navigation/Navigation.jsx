@@ -3,7 +3,7 @@ import { navLinks } from "../../constants";
 
 const Navigation = ({}) => {
   return (
-    <nav className='flex justify-between items-center p-5 bg-[#303030] border-b border-gray-300 h-25'>
+    <nav className='flex justify-between items-center p-5 border-b border-gray-300 h-25'>
       <a
         href='/'
         className='flex items-center text-2xl font-semibold text-indigo-600 no-underline'

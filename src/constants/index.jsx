@@ -83,11 +83,7 @@ const servicesContent = [
     title: "Landscaping",
     description: "We will landscape your yard and make it look nice.",
     image: lawn1,
-    details: [
-      "We will landscape your yard and make it look nice.",
-      "We will landscape your yard and make it look nice.",
-      "We will landscape your yard and make it look nice.",
-    ],
+    details: ["Mulching", "Trimming", "Other things"],
   },
   //   {
   //     id: "service-3",

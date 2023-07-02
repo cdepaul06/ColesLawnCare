@@ -20,14 +20,20 @@ const ServicesCard = () => {
               alt={service.title}
               className='h-1/2 w-1/2 object-cover object-center mt-4 mx-auto shadow-xl border border-gray-300'
             />
-            <div className='p-4'>
-              <p className='text-center'>{service.description}</p>
-              <div className='details text-left font-bold mt-4'>Details:</div>
-              <ul className='list-disc list-inside'>
+            <div className='p-4 text-left'>
+              <p>{service.description}</p>
+              <div className='details font-bold mt-4'>Details:</div>
+              <ul className='list-disc list-inside pl-4'>
                 {service.details.map((detail, index) => (
                   <li key={index}>{detail}</li>
                 ))}
               </ul>
+              <a
+                href='#contact'
+                className='inline-block mt-4 bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600 transition-colors duration-300'
+              >
+                Contact Us
+              </a>
             </div>
           </div>
         ))}

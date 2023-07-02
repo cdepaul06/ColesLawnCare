@@ -1,12 +1,16 @@
 // You can add additional links to the navigation bar here.
 const navLinks = [
   {
-    id: "about",
-    title: "About",
+    id: "services",
+    title: "Services",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "reviews",
+    title: "Reviews",
+  },
+  {
+    id: "about",
+    title: "About",
   },
   {
     id: "contact",
@@ -17,10 +21,18 @@ const navLinks = [
 // You can add additional content to the About section here.
 const aboutContent = [
   {
-    name: "John Doe",
-    title: "Frontend Developer",
+    id: 1,
+    name: "Cole Underwood",
+    title: "Owner",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id aliquam ultrices, nunc ipsum ultricies libero, vitae ti",
+      "Cole does lawn care, landscaping, and snow removal. He is a hard worker and will get the job done right.",
+  },
+  {
+    id: 2,
+    name: "Ryan Underwood",
+    title: "Partner",
+    description:
+      "Ryan does lawn care, landscaping, and snow removal. He is a hard worker and will get the job done right.",
   },
 ];
 

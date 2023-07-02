@@ -1,14 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-// If you ever want to add more navLinks just click here and add them to the array
+import { scroller } from "react-scroll";
 import { navLinks } from "../../constants";
-
-// Ctrl+Click here to get to the path of the BusinessLogo image. If the logo changes just drop the
-// .png file into the src\assets folder and it will automatically update here
 import { BusinessLogo } from "../../assets";
 
-const Navigation = ({}) => {
+const Navigation = ({ scrollToServices }) => {
+  const scrollToElement = (elementId) => {
+    scroller.scrollTo(elementId, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  };
+
   return (
     <nav className='flex flex-wrap justify-between items-center bg-white p-5 border-b border-gray-300'>
       <Link
@@ -44,12 +48,12 @@ const Navigation = ({}) => {
       >
         {navLinks.map((link) => (
           <li key={link.id}>
-            <a
-              href={`#${link.id}`}
+            <button
               className='inline-block px-5 py-3 rounded text-white bg-[#029c15] no-underline hover:bg-[#03540d]'
+              onClick={scrollToServices}
             >
               {link.title}
-            </a>
+            </button>
           </li>
         ))}
       </ul>

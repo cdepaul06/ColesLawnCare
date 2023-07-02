@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { scroller } from "react-scroll";
 import { navLinks } from "../../constants";
 import { BusinessLogo } from "../../assets";
 

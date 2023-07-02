@@ -1,3 +1,5 @@
+import { lawn1, lawn2, lawn3, lawn4, lawn5, lawn6 } from "../assets";
+
 // You can add additional links to the navigation bar here.
 const navLinks = [
   {
@@ -36,4 +38,37 @@ const aboutContent = [
   },
 ];
 
-export { navLinks, aboutContent };
+const lawnImages = [
+  {
+    id: "lawn1-1",
+    src: lawn1,
+    alt: "lawn1",
+  },
+  {
+    id: "lawn2-2",
+    src: lawn2,
+    alt: "lawn2",
+  },
+  {
+    id: "lawn3-3",
+    src: lawn3,
+    alt: "lawn3",
+  },
+  {
+    id: "lawn4-4",
+    src: lawn4,
+    alt: "lawn4",
+  },
+  {
+    id: "lawn5-5",
+    src: lawn5,
+    alt: "lawn5",
+  },
+  {
+    id: "lawn6-6",
+    src: lawn6,
+    alt: "lawn6",
+  },
+];
+
+export { navLinks, aboutContent, lawnImages };

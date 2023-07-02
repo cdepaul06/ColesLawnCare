@@ -10,7 +10,7 @@ import { BusinessLogo } from "../../assets";
 
 const Navigation = ({}) => {
   return (
-    <nav className='flex justify-between items-center p-5 border-b border-gray-300 h-25'>
+    <nav className='flex justify-between items-center bg-white p-5 border-b border-gray-300 h-15'>
       <Link
         to='/'
         className='flex items-center gap-2 pl-10'

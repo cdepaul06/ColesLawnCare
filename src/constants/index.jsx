@@ -7,10 +7,6 @@ const navLinks = [
     title: "Services",
   },
   {
-    id: "reviews",
-    title: "Reviews",
-  },
-  {
     id: "about",
     title: "About",
   },
@@ -93,18 +89,18 @@ const servicesContent = [
       "We will landscape your yard and make it look nice.",
     ],
   },
-  {
-    id: "service-3",
-    title: "Snow Removal (placeholder)",
-    description:
-      "We will remove snow from your driveway and make it look nice.",
-    image: "lawn3",
-    details: [
-      "We will remove snow from your driveway and make it look nice.",
-      "We will remove snow from your driveway and make it look nice.",
-      "We will remove snow from your driveway and make it look nice.",
-    ],
-  },
+  //   {
+  //     id: "service-3",
+  //     title: "Trimming",
+  //     description:
+  //       "We will remove snow from your driveway and make it look nice.",
+  //     image: "lawn3",
+  //     details: [
+  //       "We will remove snow from your driveway and make it look nice.",
+  //       "We will remove snow from your driveway and make it look nice.",
+  //       "We will remove snow from your driveway and make it look nice.",
+  //     ],
+  //   },
 ];
 
 export { navLinks, aboutContent, lawnImages, servicesContent };

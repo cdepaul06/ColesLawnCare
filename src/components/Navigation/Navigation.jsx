@@ -5,14 +5,6 @@ import { navLinks } from "../../constants";
 import { BusinessLogo } from "../../assets";
 
 const Navigation = ({ scrollToServices }) => {
-  const scrollToElement = (elementId) => {
-    scroller.scrollTo(elementId, {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-    });
-  };
-
   return (
     <nav className='flex flex-wrap justify-between items-center bg-white p-5 border-b border-gray-300'>
       <Link

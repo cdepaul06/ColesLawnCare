@@ -17,10 +17,7 @@ function App() {
       </div>
       <ImageCarousel />
       <br />
-      <div className='w-full mx-auto text-center mt-[25px]' id='services'>
-        <p className='text-2xl font-bold text-[#029c15]'>Services</p>
-        <ServicesCard />
-      </div>
+      <ServicesCard />
     </BrowserRouter>
   );
 }

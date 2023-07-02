@@ -30,7 +30,7 @@ const ServicesCard = () => {
               </ul>
               <a
                 href='#contact'
-                className='inline-block mt-4 bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600 transition-colors duration-300'
+                className='inline-block mt-4 bg-[#029c15] text-white px-6 py-2 rounded-md hover:bg-[#03540d] transition-colors duration-300'
               >
                 Contact Us
               </a>

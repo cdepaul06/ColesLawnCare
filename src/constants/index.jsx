@@ -1,4 +1,4 @@
-import { lawn1, lawn2, lawn3, lawn4, lawn5, lawn6 } from "../assets";
+import { lawn1, lawn2, lawn3, lawn4, lawn5, lawn6, lawn7webp } from "../assets";
 
 // You can add additional links to the navigation bar here.
 const navLinks = [
@@ -17,22 +17,12 @@ const navLinks = [
 ];
 
 // You can add additional content to the About section here.
-const aboutContent = [
-  {
-    id: 1,
-    name: "Cole Underwood",
-    title: "Owner",
-    description:
-      "Cole does lawn care, landscaping, and snow removal. He is a hard worker and will get the job done right.",
-  },
-  {
-    id: 2,
-    name: "Ryan Underwood",
-    title: "Partner",
-    description:
-      "Ryan does lawn care, landscaping, and snow removal. He is a hard worker and will get the job done right.",
-  },
-];
+const aboutContent = {
+  id: "about-content",
+  name: "Cole's Lawn Care",
+  description:
+    "We care about the work we do and we care about our customers. We will make your lawn look nice. You tell how us how you want it done and we will do it.",
+};
 
 const lawnImages = [
   {
@@ -67,6 +57,12 @@ const lawnImages = [
   },
 ];
 
+const aboutImage = {
+  id: "about-image",
+  src: lawn7webp,
+  alt: "lawn7webp",
+};
+
 const servicesContent = [
   {
     id: "service-1",
@@ -99,4 +95,4 @@ const servicesContent = [
   //   },
 ];
 
-export { navLinks, aboutContent, lawnImages, servicesContent };
+export { navLinks, aboutContent, lawnImages, servicesContent, aboutImage };

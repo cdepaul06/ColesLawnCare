@@ -5,6 +5,6 @@ import lawn3 from "./lawn3.jpg";
 import lawn4 from "./lawn4.jpg";
 import lawn5 from "./lawn5.jpg";
 import lawn6 from "./lawn6.jpg";
-import lawn7 from "./lawn7.jpg";
+import lawn7webp from "./lawn7.webp";
 
-export { BusinessLogo, lawn1, lawn2, lawn3, lawn4, lawn5, lawn6, lawn7 };
+export { BusinessLogo, lawn1, lawn2, lawn3, lawn4, lawn5, lawn6, lawn7webp };

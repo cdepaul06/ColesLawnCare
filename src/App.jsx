@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation";
 import ImageCarousel from "./components/ImageCarousel";
 import ServicesCard from "./components/ServicesCard/ServicesCard";
+import About from "./components/About";
 
 function App() {
   const scrollToServices = () => {
@@ -18,6 +19,8 @@ function App() {
       <ImageCarousel />
       <br />
       <ServicesCard />
+      <br />
+      <About />
     </BrowserRouter>
   );
 }

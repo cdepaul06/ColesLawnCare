@@ -5,6 +5,7 @@ import ImageCarousel from "./components/ImageCarousel";
 import ServicesCard from "./components/ServicesCard/ServicesCard";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const carouselRef = useRef();
@@ -40,7 +41,7 @@ function App() {
         <ImageCarousel />
       </div>
       <div ref={servicesCardRef}>
-        <ServicesCard />
+        <ServicesCard scrollToElement={scrollToElement} />
       </div>
       <div ref={aboutRef}>
         <About />
@@ -48,6 +49,7 @@ function App() {
       <div ref={contactRef}>
         <Contact />
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }

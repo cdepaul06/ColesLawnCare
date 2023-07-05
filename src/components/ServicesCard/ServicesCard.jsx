@@ -1,7 +1,7 @@
 import React from "react";
 import { servicesContent } from "../../constants";
 
-const ServicesCard = () => {
+const ServicesCard = ({ scrollToElement }) => {
   return (
     <div>
       <div className='w-full mx-auto text-center mt-[200px]'>
@@ -31,12 +31,12 @@ const ServicesCard = () => {
                     ))}
                   </ul>
                 </div>
-                <a
-                  href='#contact'
+                <button
+                  onClick={() => scrollToElement("contact")}
                   className='self-start mt-auto bg-[#029c15] text-white px-6 py-2 rounded-md hover:bg-[#03540d] transition-colors duration-300'
                 >
                   Contact Us
-                </a>
+                </button>
               </div>
             </div>
           ))}

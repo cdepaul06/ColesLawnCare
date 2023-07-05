@@ -21,7 +21,7 @@ const aboutContent = {
   id: "about-content",
   name: "Cole's Lawn Care",
   description:
-    "We care about the work we do and we care about our customers. We will make your lawn look nice. You tell how us how you want it done and we will do it.",
+    "This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. This is a wall of text. ",
 };
 
 const lawnImages = [

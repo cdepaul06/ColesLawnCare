@@ -40,7 +40,7 @@ const Navigation = ({ scrollToElementId }) => {
         {navLinks.map((link) => (
           <li key={link.id}>
             <button
-              className='inline-block px-5 py-3 rounded text-white bg-[#029c15] no-underline hover:bg-[#03540d]'
+              className='inline-block px-5 py-3 rounded text-white bg-[#029c15] no-underline hover:bg-[#03540d] transition-colors duration-300'
               onClick={() => scrollToElementId(link.id)}
             >
               {link.title}

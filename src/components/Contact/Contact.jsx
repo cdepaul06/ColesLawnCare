@@ -11,25 +11,30 @@ const Contact = () => {
 
     emailjs
       .send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         { name, email, message },
-        "YOUR_USER_ID"
+        import.meta.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
+        () => {
+          alert("Thank you. I will respond as soon as I can.");
         },
-        (err) => {
-          console.log("FAILED...", err);
+        (error) => {
+          console.error(error);
+          alert("Oops, the email did not send properly, please try again.");
         }
       );
   };
 
+  console.log("name", name);
+  console.log("email", email);
+  console.log("message", message);
+
   return (
     <div className='bg-[#03540d] ml-[530px] mt-[200px] rounded-lg text-white flex items-center justify-center w-[45%]'>
-      <div className='text-center rounded-lg w-[50%]'>
-        <p className='text-2xl font-bold text-[#029c15]'>Contact</p>
+      <div className='text-center rounded-lg w-[50%] mt-[10px]'>
+        <p className='text-2xl font-bold text-white'>Contact</p>
         <form
           className='flex flex-col sm:flex-row justify-center mx-2 sm:mx-0'
           onSubmit={sendEmail}
@@ -67,7 +72,7 @@ const Contact = () => {
                     name='message'
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder='Message'
+                    placeholder='Would you like us to do some work for you?'
                   />
                 </p>
               </div>

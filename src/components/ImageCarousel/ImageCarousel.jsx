@@ -14,13 +14,13 @@ const ImageCarousel = () => {
         emulateTouch
         autoPlay
         stopOnHover
-        interval={5000}
+        interval={3000}
         transitionTime={1000}
         centerMode
         centerSlidePercentage={33.33}
       >
         {lawnImages.map((image, index) => (
-          <div key={index} className='h-[75vh] overflow-hidden'>
+          <div key={index} className='h-[60vh] overflow-hidden'>
             <img
               src={image.src}
               alt={image.alt}

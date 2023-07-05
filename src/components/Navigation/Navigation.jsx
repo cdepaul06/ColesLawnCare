@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import { navLinks } from "../../constants";
 import { BusinessLogo } from "../../assets";
 
-const Navigation = ({ scrollToServices }) => {
+const Navigation = ({ scrollToElementId }) => {
   return (
     <nav className='flex flex-wrap justify-between items-center bg-white p-5 border-b border-gray-300'>
       <Link
         to='/'
         className='flex items-center gap-2 pl-2 w-full md:w-auto md:pl-10'
-        onClick={() => window.scrollTo(0, 0)}
+        onClick={() => scrollToElementId("top")}
       >
         <img
           src={BusinessLogo}
@@ -41,7 +41,7 @@ const Navigation = ({ scrollToServices }) => {
           <li key={link.id}>
             <button
               className='inline-block px-5 py-3 rounded text-white bg-[#029c15] no-underline hover:bg-[#03540d]'
-              onClick={scrollToServices}
+              onClick={() => scrollToElementId(link.id)}
             >
               {link.title}
             </button>

@@ -3,7 +3,7 @@ import { lawn1, lawn2, lawn3, lawn4, lawn5, lawn6, lawn7webp } from "../assets";
 // You can add additional links to the navigation bar here.
 const navLinks = [
   {
-    id: "servicesCard",
+    id: "services",
     title: "Services",
   },
   {
@@ -81,18 +81,14 @@ const servicesContent = [
     image: lawn1,
     details: ["Mulching", "Trimming", "Other things"],
   },
-  //   {
-  //     id: "service-3",
-  //     title: "Trimming",
-  //     description:
-  //       "We will remove snow from your driveway and make it look nice.",
-  //     image: "lawn3",
-  //     details: [
-  //       "We will remove snow from your driveway and make it look nice.",
-  //       "We will remove snow from your driveway and make it look nice.",
-  //       "We will remove snow from your driveway and make it look nice.",
-  //     ],
-  //   },
+  {
+    id: "service-3",
+    title: "Whatever you want",
+    description:
+      "We will remove snow from your driveway and make it look nice.",
+    image: "lawn3",
+    details: ["Whatever you want.", "Whatever you want.", "Whatever you want."],
+  },
 ];
 
 export { navLinks, aboutContent, lawnImages, servicesContent, aboutImage };

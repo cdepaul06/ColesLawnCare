@@ -7,51 +7,29 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-function App() {
-  const carouselRef = useRef();
-  const servicesCardRef = useRef();
-  const aboutRef = useRef();
-  const contactRef = useRef();
-
-  const scrollToElement = (sectionId) => {
-    switch (sectionId) {
-      case "carousel":
-        carouselRef.current.scrollIntoView({ behavior: "smooth" });
-        break;
-      case "services":
-        servicesCardRef.current.scrollIntoView({ behavior: "smooth" });
-        break;
-      case "about":
-        aboutRef.current.scrollIntoView({ behavior: "smooth" });
-        break;
-      case "contact":
-        contactRef.current.scrollIntoView({ behavior: "smooth" });
-        break;
-      default:
-        window.scrollTo(0, 0);
-    }
-  };
-
+const App = () => {
   return (
     <BrowserRouter>
       <div className='sticky top-0 z-50'>
-        <Navigation scrollToElementId={scrollToElement} />
+        <Navigation />
       </div>
-      <div ref={carouselRef}>
+      <div id='carousel' className='pt-[13rem]'>
         <ImageCarousel />
       </div>
-      <div ref={servicesCardRef}>
-        <ServicesCard scrollToElement={scrollToElement} />
+      <div id='services' className='pt-[15rem]'>
+        <ServicesCard />
       </div>
-      <div ref={aboutRef}>
+      <div id='about' className='pt-[15rem]'>
         <About />
       </div>
-      <div ref={contactRef}>
+      <div id='contact' className='pt-[15rem] flex justify-center'>
         <Contact />
       </div>
-      <Footer />
+      <div id='footer'>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

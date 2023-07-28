@@ -57,7 +57,7 @@ const Contact = () => {
   };
 
   return (
-    <div className='bg-[#03540d] ml-[530px] mt-[200px] rounded-lg text-white flex items-center justify-center w-[45%]'>
+    <div className='bg-[#03540d] rounded-lg text-white flex items-center justify-center w-[45%]'>
       <div className='text-center rounded-lg w-[50%] mt-[10px]'>
         <p className='text-2xl font-bold text-white'>Contact</p>
         <form

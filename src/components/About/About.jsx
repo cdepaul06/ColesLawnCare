@@ -9,7 +9,6 @@ const About = ({}) => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        marginTop: "200px",
       }}
     >
       <h1 className='text-2xl font-bold text-[#029c15]'>About</h1>

@@ -20,7 +20,10 @@ const ImageCarousel = () => {
         centerSlidePercentage={33.33}
       >
         {lawnImages.map((image, index) => (
-          <div key={index} className='h-[60vh] overflow-hidden'>
+          <div
+            key={index}
+            className='h-[60vh] overflow-hidden border border-black'
+          >
             <img
               src={image.src}
               alt={image.alt}

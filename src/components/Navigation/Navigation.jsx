@@ -22,6 +22,7 @@ const Navigation = () => {
           />
           <p className='text-gray-900 font-bold cursor-pointer flex pl-2'>
             Cole's Lawn Care
+            <span className='font-normal'> &nbsp;| Quality Service</span>
           </p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>

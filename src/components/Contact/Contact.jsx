@@ -25,6 +25,12 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    if (form.name === "" || form.email === "" || form.message === "") {
+      alert("Please fill out all fields.");
+      setLoading(false);
+      return;
+    }
+
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,

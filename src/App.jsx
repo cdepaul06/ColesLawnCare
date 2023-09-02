@@ -1,19 +1,18 @@
-import React, { useRef } from "react";
-import { BrowserRouter } from "react-router-dom";
-import Navigation from "./components/Navigation/Navigation";
-import ImageCarousel from "./components/ImageCarousel";
-import ServicesCard from "./components/ServicesCard/ServicesCard";
+import React from "react";
+import Navigation from "./components/Navigation/";
+import ServicesCard from "./components/ServicesCard/";
+import ImageCarousel from "./components/ImageCarousel/";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className='sticky top-0 z-50'>
+    <div>
+      <div id='navigation' className='aboslute z-20'>
         <Navigation />
       </div>
-      <div id='carousel' className='pt-[13rem]'>
+      <div id='carousel' className='absolute pt-[13rem]'>
         <ImageCarousel />
       </div>
       <div id='services' className='pt-[15rem]'>
@@ -28,7 +27,7 @@ const App = () => {
       <div id='footer'>
         <Footer />
       </div>
-    </BrowserRouter>
+    </div>
   );
 };
 

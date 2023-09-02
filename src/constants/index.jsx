@@ -82,8 +82,9 @@ const servicesContent = [
     description: "We will mow your grass and make it look nice.",
     image: lawn5,
     details: [
-      "We will mow your grass and make it look nice.",
-      "We will mow your grass and make it look nice.",
+      "Striping",
+      "Trim around the edges of your yard.",
+      "Blow off driveways and walkways.",
     ],
   },
   {
@@ -91,7 +92,7 @@ const servicesContent = [
     title: "Landscaping",
     description: "We will landscape your yard and make it look nice.",
     image: lawn1,
-    details: ["Mulching", "Trimming", "Other things"],
+    details: ["Mulching", "Trimming", "Weeding"],
   },
   // * You can uncomment this if you want to add additional services, if you offer more than 3 you can just
   // * copy and paste the above service and change the ID and content.

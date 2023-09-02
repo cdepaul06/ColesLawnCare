@@ -1,11 +1,12 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import { lawnImages } from "../../constants";
 
-const ImageCarousel = () => {
+const ImageCarousel = ({}) => {
   return (
-    <div className='mx-auto w-3/4 border-2 border-black shadow-lg mt-8'>
+    <section className='mx-auto w-3/4 border-2 border-black shadow-lg mt-8'>
       <Carousel
         showThumbs={false}
         showIndicators={false}
@@ -32,7 +33,7 @@ const ImageCarousel = () => {
           </div>
         ))}
       </Carousel>
-    </div>
+    </section>
   );
 };
 

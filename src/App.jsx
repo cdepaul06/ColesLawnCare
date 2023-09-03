@@ -6,7 +6,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-const App = () => {
+const App = ({}) => {
   return (
     <div>
       <div id='navigation' className='relative z-20'>

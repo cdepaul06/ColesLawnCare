@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 
-const Contact = () => {
+const Contact = ({}) => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",

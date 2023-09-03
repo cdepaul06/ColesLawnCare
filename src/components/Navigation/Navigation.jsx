@@ -4,7 +4,7 @@ import { navLinks } from "../../constants";
 import { BusinessLogo } from "../../assets";
 import { Link as ScrollLink } from "react-scroll";
 
-const Navigation = () => {
+const Navigation = ({}) => {
   const [toggle, setToggle] = useState(false);
 
   return (

@@ -9,10 +9,10 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <div>
-      <div id='navigation' className='aboslute z-20'>
+      <div id='navigation' className='relative z-20'>
         <Navigation />
       </div>
-      <div id='carousel' className='absolute pt-[13rem]'>
+      <div id='carousel' className='pt-[13rem]'>
         <ImageCarousel />
       </div>
       <div id='services' className='pt-[15rem]'>

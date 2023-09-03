@@ -6,10 +6,10 @@ import { lawnImages } from "../../constants";
 
 const ImageCarousel = ({}) => {
   return (
-    <section className='mx-auto w-3/4 border-2 border-black shadow-lg mt-8'>
+    <section className='mx-auto w-3/4 border-2 border-black shadow-lg mt-8 relative z-0'>
       <Carousel
         showThumbs={false}
-        showIndicators={false}
+        showIndicators={true}
         showStatus={false}
         infiniteLoop
         emulateTouch

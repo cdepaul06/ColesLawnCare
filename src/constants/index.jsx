@@ -23,8 +23,8 @@ const aboutContent = {
   id: "about-content",
   name: "Cole's Lawn Care",
   description:
-    "This is a wall of text. This is a wall of text. This is a wall of text. " +
-    "This is a wall of text. This is a wall of text. This is a wall of text. " +
+    "We are a family owned and operated business that is dedicated on providing quality service." +
+    "We pride ourselves on doing the job quickly, cleanly, " +
     "This is a wall of text. This is a wall of text. This is a wall of text. " +
     "This is a wall of text. This is a wall of text. This is a wall of text. " +
     "This is a wall of text. This is a wall of text. This is a wall of text. " +

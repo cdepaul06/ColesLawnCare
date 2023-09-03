@@ -71,7 +71,7 @@ const Contact = ({}) => {
           className='flex flex-col sm:flex-row justify-center mx-2 sm:mx-0'
           onSubmit={handleSubmit}
         >
-          <div className='flex flex-col border-2 rounded-lg overflow-hidden mt-[25px] lg:w-full sm:w-[482px] px-4 sm:mx-2 mb-4 shadow-lg'>
+          <div className='flex flex-col border-2 rounded-lg overflow-hidden mt-[25px] lg:w-full px-4 sm:mx-2 mb-4 shadow-lg'>
             <div className='p-4 text-left flex-grow flex flex-col'>
               <div className='mb-4 space-y-4'>
                 <p>

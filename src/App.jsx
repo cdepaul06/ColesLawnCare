@@ -3,6 +3,7 @@ import Navigation from "./components/Navigation/";
 import ServicesCard from "./components/ServicesCard/";
 import ImageCarousel from "./components/ImageCarousel/";
 import About from "./components/About";
+import Quote from "./components/Quote";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -20,6 +21,9 @@ const App = ({}) => {
       </div>
       <div id='about' className='pt-[15rem]'>
         <About />
+      </div>
+      <div id='quote' className='pt-[15rem] flex justify-center'>
+        <Quote />
       </div>
       <div id='contact' className='pt-[15rem] flex justify-center'>
         <Contact />

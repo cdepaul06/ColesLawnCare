@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../../constants";
 import { BusinessLogo } from "../../assets";
@@ -6,6 +6,18 @@ import { Link as ScrollLink } from "react-scroll";
 
 const Navigation = ({}) => {
   const [toggle, setToggle] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const isMobile = windowWidth <= 768;
 
   return (
     <nav className='flex justify-between items-center bg-white p-5 fixed w-full'>
@@ -22,7 +34,9 @@ const Navigation = ({}) => {
           />
           <p className='text-gray-900 font-bold cursor-pointer flex pl-2'>
             Cole's Lawn Care
-            <span className='font-normal'> &nbsp;| Quality Service</span>
+            {!isMobile && (
+              <span className='font-normal'> &nbsp;| Quality Service</span>
+            )}
           </p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>

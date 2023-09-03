@@ -83,8 +83,8 @@ const servicesContent = [
     image: lawn5,
     details: [
       "Striping",
-      "Trim around the edges of your yard.",
-      "Blow off driveways and walkways.",
+      "Trim around the edges of your yard",
+      "Blow off driveways and walkways",
     ],
   },
   {

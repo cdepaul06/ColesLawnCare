@@ -13,6 +13,10 @@ const navLinks = [
     title: "About",
   },
   {
+    id: "quote",
+    title: "Quote",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -24,13 +28,9 @@ const aboutContent = {
   name: "Cole's Lawn Care",
   description:
     "We are a family owned and operated business that is dedicated on providing quality service." +
-    "We pride ourselves on doing the job quickly, cleanly, " +
-    "This is a wall of text. This is a wall of text. This is a wall of text. " +
-    "This is a wall of text. This is a wall of text. This is a wall of text. " +
-    "This is a wall of text. This is a wall of text. This is a wall of text. " +
-    "This is a wall of text. This is a wall of text. This is a wall of text. " +
-    "This is a wall of text. This is a wall of text. This is a wall of text. " +
-    "This is a wall of text. This is a wall of text. This is a wall of text. ",
+    " We pride ourselves on doing the job quickly, cleanly, and to your liking. " +
+    "We offer a variety of services, including but not limited to: mowing, landscaping, and snow removal." +
+    " To find out more about pricing, either request a quote or contact us.",
 };
 
 // * Use the imports from above as the src for the images.

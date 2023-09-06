@@ -3,10 +3,21 @@ import { Link } from "react-router-dom";
 import { navLinks } from "../../constants";
 import { BusinessLogo } from "../../assets";
 import { Link as ScrollLink } from "react-scroll";
+import { Dialog, DialogContent } from "@mui/material";
+import Contact from "../Contact";
 
 const Navigation = ({}) => {
   const [toggle, setToggle] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [openDialog, setOpenDialog] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpenDialog(true);
+  };
+
+  const handleClose = () => {
+    setOpenDialog(false);
+  };
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -39,26 +50,56 @@ const Navigation = ({}) => {
             )}
           </p>
         </Link>
+
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((link) => (
             <li
               key={link.id}
               className='group font-medium cursor-pointer relative'
             >
-              <ScrollLink
-                to={link.id}
-                spy={true}
-                smooth={true}
-                offset={link.id === "about" ? 80 : 0}
-                duration={500}
-                className='text-green-700 hover:text-[#00c45c] hover:underline transition-colors duration-300'
-                activeClass='text-[#0f1613]'
-              >
-                {link.title}
-              </ScrollLink>
+              {link.title === "Contact" ? (
+                <span
+                  onClick={handleClickOpen}
+                  className='text-green-700 hover:text-[#00c45c] hover:underline transition-colors duration-300'
+                >
+                  {link.title}
+                </span>
+              ) : (
+                <ScrollLink
+                  to={link.id}
+                  spy={true}
+                  smooth={true}
+                  offset={link.id === "about" ? 80 : 0}
+                  duration={500}
+                  className='text-green-700 hover:text-[#00c45c] hover:underline transition-colors duration-300'
+                  activeClass='text-[#0f1613]'
+                >
+                  {link.title}
+                </ScrollLink>
+              )}
             </li>
           ))}
         </ul>
+
+        <Dialog
+          open={openDialog}
+          onClose={handleClose}
+          aria-labelledby='contact-form-dialog-title'
+          fullWidth={true}
+          maxWidth={"sm"}
+          PaperProps={{
+            style: {
+              height: "100%",
+              width: "100%",
+              borderRadius: "1rem",
+            },
+          }}
+        >
+          <DialogContent className='w-full h-full' style={{ padding: 0 }}>
+            <Contact />
+          </DialogContent>
+        </Dialog>
+
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <svg
             className='fill-current text-gray-900 w-7 h-7 cursor-pointer'
@@ -69,6 +110,7 @@ const Navigation = ({}) => {
             <title>menu</title>
             <path d='M0 3.5A1.5 1.5 0 011.5 2h17a1.5 1.5 0 110 3h-17A1.5 1.5 0 010 3.5zM1.5 9a1.5 1.5 0 011.5-1.5h17a1.5 1.5 0 110 3h-17A1.5 1.5 0 011.5 9zm0 5a1.5 1.5 0 011.5-1.5h17a1.5 1.5 0 110 3h-17A1.5 1.5 0 011.5 14z' />
           </svg>
+
           <div
             className={`${
               toggle ? "flex" : "hidden"
@@ -77,18 +119,27 @@ const Navigation = ({}) => {
             <ul className='list-none flex justify-end items-start flex-col gap-4'>
               {navLinks.map((link) => (
                 <li key={link.id} className='font-medium cursor-pointer'>
-                  <ScrollLink
-                    to={link.id}
-                    spy={true}
-                    smooth={true}
-                    offset={link.id === "about" ? 80 : 0}
-                    duration={500}
-                    className='border border-[#029c15] text-[#029c15] px-2 py-1 rounded hover:bg-[#029c15] hover:text-white transition-colors duration-300'
-                    activeClass='text-white'
-                    onClick={() => setToggle(false)}
-                  >
-                    {link.title}
-                  </ScrollLink>
+                  {link.title === "Contact" ? (
+                    <span
+                      onClick={handleClickOpen}
+                      className='border border-[#029c15] text-[#029c15] px-2 py-1 rounded hover:bg-[#029c15] hover:text-white transition-colors duration-300'
+                    >
+                      {link.title}
+                    </span>
+                  ) : (
+                    <ScrollLink
+                      to={link.id}
+                      spy={true}
+                      smooth={true}
+                      offset={link.id === "about" ? 80 : 0}
+                      duration={500}
+                      className='border border-[#029c15] text-[#029c15] px-2 py-1 rounded hover:bg-[#029c15] hover:text-white transition-colors duration-300'
+                      activeClass='text-white'
+                      onClick={() => setToggle(!toggle)}
+                    >
+                      {link.title}
+                    </ScrollLink>
+                  )}
                 </li>
               ))}
             </ul>

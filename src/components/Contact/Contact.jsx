@@ -63,7 +63,7 @@ const Contact = ({}) => {
   };
 
   return (
-    <div className='bg-[#03540d] rounded-lg text-white flex items-center justify-center w-[97%] lg:w-[45%]'>
+    <div className='bg-[#03540d] rounded-lg text-white flex items-center justify-center w-full h-full'>
       <div className='text-center rounded-lg mt-[10px]'>
         <p className='text-2xl font-bold text-white'>Contact</p>
         <form
@@ -111,7 +111,7 @@ const Contact = ({}) => {
               </div>
               <button
                 type='submit'
-                className='self-start mt-auto bg-[#029c15] text-white px-6 py-2 rounded-md hover:bg-[#ffff] hover:text-[#029c15] transition-colors duration-300'
+                className='self-start mt-auto bg-[#029c15] text-white px-6 py-2 rounded-md hover:bg-[#ffff] hover:text-[#029c15] transition-colors duration-500'
               >
                 {loading ? "Sending..." : "Send"}
               </button>

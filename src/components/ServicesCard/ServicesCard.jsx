@@ -7,7 +7,7 @@ const ServicesCard = ({}) => {
     <div>
       <div className='w-full text-center'>
         <p className='text-2xl font-bold text-[#029c15]'>Services</p>
-        <div className='flex flex-col sm:flex-row justify-center mx-2 sm:mx-0'>
+        <div className='flex flex-wrap justify-center mx-2 sm:mx-0'>
           {servicesContent.map((service, index) => (
             <div
               key={index}

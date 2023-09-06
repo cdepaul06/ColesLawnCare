@@ -97,7 +97,7 @@ const Quote = ({}) => {
             />
           </div>
           <div className='mt-2'>
-            <label className='block mb-1'>Address:</label>
+            <label className='block mb-1'>Property Address:</label>
             <input
               name='address'
               value={form.message}
@@ -115,7 +115,7 @@ const Quote = ({}) => {
                 renderValue={(selected) => selected.join(", ")}
                 sx={{
                   width: "19.5rem",
-                  height: "2rem",
+                  height: "2.2rem",
                   backgroundColor: "white",
                 }}
               >
@@ -145,15 +145,12 @@ const Quote = ({}) => {
             ))}
           </div>
           <div className='mt-10 mb-2 ml-2'>
-            <Button
-              style={{
-                backgroundColor: "#029c15",
-                color: "white",
-                fontWeight: "bold",
-              }}
+            <button
+              type='submit'
+              className='self-start mt-auto bg-[#029c15] text-white px-6 py-2 rounded-md hover:bg-[#ffff] hover:text-[#029c15] transition-colors duration-500'
             >
               {loading ? "Requesting..." : "Request Quote"}
-            </Button>
+            </button>
           </div>
         </form>
       </div>

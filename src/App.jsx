@@ -25,9 +25,9 @@ const App = ({}) => {
       <div id='quote' className='pt-[15rem] flex justify-center'>
         <Quote />
       </div>
-      <div id='contact' className='pt-[15rem] flex justify-center'>
+      {/* <div id='contact' className='pt-[15rem] flex justify-center'>
         <Contact />
-      </div>
+      </div> */}
       <div id='footer'>
         <Footer />
       </div>

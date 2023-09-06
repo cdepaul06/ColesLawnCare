@@ -27,7 +27,7 @@ const aboutContent = {
   id: "about-content",
   name: "Cole's Lawn Care",
   description:
-    "We are a family owned and operated business that is dedicated on providing quality service." +
+    "We are a family owned and operated business that is dedicated to providing quality service." +
     " We pride ourselves on doing the job quickly, cleanly, and to your liking. " +
     "We offer a variety of services, including but not limited to: mowing, landscaping, and snow removal." +
     " To find out more about pricing, either request a quote or contact us.",
@@ -79,18 +79,20 @@ const servicesContent = [
   {
     id: "service-1",
     title: "Grass Mowing",
-    description: "We will mow your grass and make it look nice.",
+    description:
+      "We will mow your grass to your exact specifications, and we will do it well.",
     image: lawn5,
     details: [
       "Striping",
-      "Trim around the edges of your yard",
+      "Trim edges of the yard",
       "Blow off driveways and walkways",
     ],
   },
   {
     id: "service-2",
     title: "Landscaping",
-    description: "We will landscape your yard and make it look nice.",
+    description:
+      "We will landscape your yard to your exact specifications, and we will do it well.",
     image: lawn1,
     details: ["Mulching", "Trimming", "Weeding"],
   },

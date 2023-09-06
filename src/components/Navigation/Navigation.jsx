@@ -81,7 +81,7 @@ const Navigation = ({}) => {
                     to={link.id}
                     spy={true}
                     smooth={true}
-                    offset={-70}
+                    offset={link.id === "about" ? 80 : 0}
                     duration={500}
                     className='border border-[#029c15] text-[#029c15] px-2 py-1 rounded hover:bg-[#029c15] hover:text-white transition-colors duration-300'
                     activeClass='text-white'

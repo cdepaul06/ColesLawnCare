@@ -32,14 +32,14 @@ const ServicesCard = ({}) => {
                   </ul>
                 </div>
                 <ScrollLink
-                  to='contact'
+                  to='quote'
                   spy={true}
                   smooth={true}
-                  offset={200}
+                  offset={0}
                   duration={500}
                 >
                   <button className='self-start bg-[#029c15] text-white px-4 py-2 mt-8 rounded-md hover:bg-[#03540d] transition-colors duration-300'>
-                    Contact Us
+                    Request Quote
                   </button>
                 </ScrollLink>
               </div>

@@ -63,8 +63,8 @@ const Contact = ({}) => {
   };
 
   return (
-    <div className='bg-[#03540d] rounded-lg text-white flex items-center justify-center lg:w-[45%] sm:w-full'>
-      <div className='text-center rounded-lg lg:w-[50%] sm:w-full mt-[10px]'>
+    <div className='bg-[#03540d] rounded-lg text-white flex items-center justify-center w-[97%] lg:w-[45%]'>
+      <div className='text-center rounded-lg mt-[10px]'>
         <p className='text-2xl font-bold text-white'>Contact</p>
         <form
           ref={formRef}

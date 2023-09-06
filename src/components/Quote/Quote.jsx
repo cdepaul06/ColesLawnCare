@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { Chip, Button, Select } from "@mui/material";
+import { Chip, Button, Select, MenuItem } from "@mui/material";
 import { servicesContent } from "../../constants";
 import emailjs from "emailjs-com";
 
-const Quote = () => {
+const Quote = ({}) => {
   const [selectedServices, setSelectedServices] = useState([]);
   const [form, setForm] = useState({
     name: "",
     email: "",
-    message: "",
+    address: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -29,20 +29,24 @@ const Quote = () => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: import.meta.env.VITE_APP_NAME,
-          from_email: form.email,
-          to_email: import.meta.env.VITE_APP_EMAIL,
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_PUBLIC_KEY
-      )
-      .then(
+    console.log(form);
+
+    emailjs.send;
+    import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      {
+        from_name: form.name,
+        to_name: import.meta.env.VITE_APP_NAME,
+        from_email: form.email,
+        to_email: import.meta.env.VITE_APP_EMAIL,
+        message: form.address
+          .concat(
+            "The selected services for the customer are: ",
+            selectedServices
+          )
+          .join(", "),
+      },
+      import.meta.env.VITE_APP_PUBLIC_KEY().then(
         () => {
           setLoading(false);
           alert("Thank you. I will respond as soon as I can.");
@@ -60,68 +64,65 @@ const Quote = () => {
       );
   };
 
-  console.log(selectedServices);
-
   return (
-    <div className='bg-[#03540d] rounded-lg text-white flex items-center justify-center lg:w-[45%] sm:w-full'>
+    <div className='bg-[#03540d] rounded-lg text-white flex justify-center lg:w-[45%] w-[97%] p-5'>
       <div>
-        <p className='text-2xl font-bold text-white'>Request Quote</p>
-        <form onSubmit={handleSubmit}>
-          <div className='mt-5'>
-            <label>Name:</label>
+        <div className='flex flex-row justify-center mb-5'>
+          <p className='text-2xl font-bold text-white text-center'>
+            Request Quote
+          </p>
+        </div>
+        <form
+          onSubmit={handleSubmit}
+          className='border-2 border-white rounded-lg p-5'
+        >
+          <div>
+            <label className='block mb-1'>Name:</label>
             <input
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
-              className='border border-black ml-1 flex flex-row justify-center text-black'
+              className='rounded ml-1 flex flex-row justify-center text-black px-2 py-1'
             />
           </div>
           <div className='mt-2'>
-            <label>Email:</label>
+            <label className='block mb-1'>Email:</label>
             <input
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
-              className='border border-black ml-1 flex flex-row justify-center text-black'
+              className='rounded ml-1 flex flex-row justify-center text-black px-2 py-1'
             />
           </div>
           <div className='mt-2'>
-            <label>Message:</label>
-            <textarea
-              name='message'
+            <label className='block mb-1'>Address:</label>
+            <input
+              name='address'
               value={form.message}
               onChange={handleChange}
-              className='border border-black ml-1 flex flex-row justify-center text-black'
+              className='rounded ml-1 flex flex-row justify-center text-black px-2 py-1'
             />
           </div>
           <div className='mt-2'>
-            <label>Services:</label>
-            <div className='ml-2 w-20'>
+            <label className='block mb-1'>Services:</label>
+            <div className='ml-1 w-20'>
               <Select
                 multiple
                 value={selectedServices}
-                onChange={(e) => {
-                  setSelectedServices(e.target.value);
-                }}
-                renderValue={(selected) => {
-                  if (selected.length === 0) {
-                    return "Select a Service";
-                  }
-                  return (
-                    <div className='bg-white rounded-lg'>
-                      {selected.map((value) => (
-                        <Chip key={value} label={value} />
-                      ))}
-                    </div>
-                  );
+                onChange={(e) => setSelectedServices(e.target.value)}
+                renderValue={(selected) => selected.join(", ")}
+                sx={{
+                  width: "19.5rem",
+                  height: "2rem",
+                  backgroundColor: "white",
                 }}
               >
                 {servicesContent.map((service, index) => (
-                  <option key={index} value={service.title}>
+                  <MenuItem key={index} value={service.title}>
                     {service.title}
-                  </option>
+                  </MenuItem>
                 ))}
               </Select>
             </div>
@@ -143,8 +144,14 @@ const Quote = () => {
               />
             ))}
           </div>
-          <div className='mt-5 mb-2 flex flex-row justify-center'>
-            <Button style={{ backgroundColor: "#029c15", color: "white" }}>
+          <div className='mt-10 mb-2 ml-2'>
+            <Button
+              style={{
+                backgroundColor: "#029c15",
+                color: "white",
+                fontWeight: "bold",
+              }}
+            >
               {loading ? "Requesting..." : "Request Quote"}
             </Button>
           </div>

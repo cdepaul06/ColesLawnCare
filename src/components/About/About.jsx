@@ -16,13 +16,13 @@ const About = ({}) => {
         <img
           id={aboutImage.id}
           src={aboutImage.src}
-          className='rounded-lg lg:w-[50%] sm:w-[99%] sm:h-[450px] object-cover shadow-xl border border-gray-300'
+          className='rounded-lg lg:w-[50%] sm:w-[97%] sm:h-[350px] object-cover shadow-xl border border-gray-300'
           alt='Lawn'
           style={{
             marginTop: "25px",
           }}
         />
-        <div className='border border-green-500 rounded-lg mt-[20px] p-10 break-words lg:w-[50%] sm:w-[99%]'>
+        <div className='border border-green-500 rounded-lg mt-[20px] p-10 break-words lg:w-[50%] sm:w-[97%]'>
           <p className='mt-5'>{aboutContent.description}</p>
         </div>
       </div>
